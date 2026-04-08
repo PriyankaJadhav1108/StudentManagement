@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true">
+    <testsuites>
+        <testsuite name="Student Management Tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+    <php>
+        <env name="MYSQL_HOST" value="localhost"/>
+        <env name="MYSQL_USER" value="root"/>
+        <env name="MYSQL_PASSWORD" value=""/>
+        <env name="MYSQL_DATABASE" value="student_db_test"/>
+    </php>
+</phpunit>
