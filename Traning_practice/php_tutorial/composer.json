@@ -1,0 +1,41 @@
+{
+    "name": "ashuu/php-tutorial",
+    "description": "A comprehensive PHP tutorial project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "monolog/monolog": "^2.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/http-foundation": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ashuu\\PhpTutorial\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ashuu\\PhpTutorial\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyze": "phpstan analyse",
+        "start-server": "php -S localhost:8000 -t public"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
